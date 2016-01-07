@@ -14,7 +14,7 @@
 	<pre>
 	<?php
 		// (1). Open the database connection
-		$connection = mysql_connect("localhost", "root", "Bob1@Saron2");
+		$connection = mysql_connect("localhost", "root", "Ur DB password");
 
 		// (2). Select the winestore database
 		mysql_select_db("winestore");
