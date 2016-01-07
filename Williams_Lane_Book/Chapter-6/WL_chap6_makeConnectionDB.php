@@ -20,8 +20,9 @@
 		mysql_select_db("winestore");
 
 		// (3). Run the query on the winestore through the connection
-		$result = mysql_query("SELECT *
-				       		FROM wine limit 5", $connection);		
+		$query = "SELECT *
+			     FROM wine limit 5"; 
+		$result = mysql_query($query, $connection) or die($query."<br/><br/>".mysql_error());		
 
 		// (4). While there are still rows in the result set, 
 		//		fetch the current row into the array $row
