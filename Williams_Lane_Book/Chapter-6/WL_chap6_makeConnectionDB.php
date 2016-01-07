@@ -21,7 +21,7 @@
 
 		// (3). Run the query on the winestore through the connection
 		$result = mysql_query("SELECT *
-							   		FROM wine limit 5", $connection);		
+				       		FROM wine limit 5", $connection);		
 
 		// (4). While there are still rows in the result set, 
 		//		fetch the current row into the array $row
