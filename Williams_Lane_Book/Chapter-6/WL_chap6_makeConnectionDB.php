@@ -26,16 +26,42 @@
 
 		// (4). While there are still rows in the result set, 
 		//		fetch the current row into the array $row
-		while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
-			// (5). Print out each element in $row, i.e., print the values
-			//		of the attributes
-			foreach ($row as $attribute) {
-				echo "{$attribute} ";
-			}
+		// while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
+		// 	// (5). Print out each element in $row, i.e., print the values
+		// 	//		of the attributes
+		// 	foreach ($row as $attribute) {
+		// 		echo "{$attribute} ";
+		// 	}
 
-			// Print a carriage return to neaten the output
-			print "\n";
-		}
+		// 	// Print a carriage return to neaten the output
+		// 	print "\n";
+		// }
+		
+		$fields_num = mysql_num_fields($result);
+
+	      	echo "<table border='1'><tr>";
+	      	// printing table headers
+	      	for($i=0; $i<$fields_num; $i++)
+	      	{
+	          	$field = mysql_fetch_field($result);
+	          	echo "<td>{$field->name}</td>";
+	      	}
+	      	echo "</tr>\n";
+	      	// printing table rows
+	      	while($row = mysql_fetch_row($result))
+	      	{
+	          	echo "<tr>";
+	
+	          	// $row is array... foreach( .. ) puts every element
+	          	// of $row to $cell variable
+	           	foreach($row as $cell)
+	              		echo "<td>$cell</td>";
+	
+	          	echo "</tr>\n";
+	      	}
+	      
+	      	mysql_free_result($result);
+
 	?>
 
 
