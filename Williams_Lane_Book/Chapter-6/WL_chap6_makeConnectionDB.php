@@ -13,6 +13,7 @@
 <!-- Example (pp. 172): Connecting to MySQL database with PHP -->
 	<pre>
 	<?php
+		error_reporting(0);	// hides system error message
 		// (1). Open the database connection
 		$connection = mysql_connect("localhost", "root", "Ur DB password");
 		
