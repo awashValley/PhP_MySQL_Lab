@@ -18,7 +18,7 @@
     <?php
         if(isset($_POST['submit'])){
             error_reporting(0);
-            $con = mysql_connect("localhost", "root", "Bob1@Saron2");
+            $con = mysql_connect("localhost", "root", "Password");
 
             if(!($con)){
               die("Can not connect: " . mysql_error());
