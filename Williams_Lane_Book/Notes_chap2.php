@@ -1,4 +1,4 @@
-// David and Lane book: MySQL & PHP (Chapter-2)
+# David and Lane book: MySQL and PHP (Chapter-2)
 /*
 - PHP has a syntax similar to JavaScript, which many web designers have learned; both languages hark back to the classic C and Perl languages in syntax.
 - PHP is a recursive acronym that stands for PHP: Hypertext Preprocessor; this is in the naming style of GNU, which stands for GNU’s Not Unix and which began this odd trend.
