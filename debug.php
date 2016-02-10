@@ -1,1 +1,3 @@
 
+// Parse error: syntax error, unexpected T_IF in
+   DEBUG: check if a semi-colon is forgotten...
